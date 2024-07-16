@@ -25,6 +25,7 @@
     </div>
 
     <!-- Bootstrap Cards Example -->
+<<<<<<< HEAD
     <div class="row" id="product-container">
         <!-- Product cards will be dynamically added here -->
     </div>
@@ -34,6 +35,12 @@
         <!-- Book cards will be dynamically added here -->
     </div>
 
+=======
+    <h3>Products</h3>
+    <div class="row" id="product-container">
+        <!-- Product cards will be dynamically added here -->
+    </div>
+>>>>>>> e9a76d8df7b6d049e4b2774ee404977b779cff3e
     <div class="mb-3">
         <div id="selectedCount" class="form-control">0 Your Selected Products</div>
     </div>
@@ -60,6 +67,7 @@
                     displayStudentData(data.student);
                     // Update product section
                     updateProductSection(data.products);
+<<<<<<< HEAD
                     // Update book section
                     updateBookSection(data.books);
                 } else {
@@ -68,6 +76,13 @@
                     // Clear product and book sections
                     clearProductSection();
                     clearBookSection();
+=======
+                } else {
+                    // Display no student message
+                    displayNoStudentMessage();
+                    // Clear product section
+                    clearProductSection();
+>>>>>>> e9a76d8df7b6d049e4b2774ee404977b779cff3e
                 }
             })
             .catch(error => {
@@ -116,7 +131,11 @@
             const card = `
                 <div class="col-md-3 mb-4">
                     <div class="card">
+<<<<<<< HEAD
                         <img src="${product.image}" class="card-img-top" alt="${product.name}">
+=======
+                       <img src="${product.image}" class="card-img-top" alt="${product.name}">
+>>>>>>> e9a76d8df7b6d049e4b2774ee404977b779cff3e
                         <div class="card-body">
                             <h5 class="card-title">${product.name}</h5>
                             <p class="card-text">Price: ₹${product.price}</p>
@@ -146,6 +165,7 @@
         updateTotalPrice();
     }
 
+<<<<<<< HEAD
     // Update book section with fetched books
     function updateBookSection(books) {
         const bookContainer = document.getElementById('book-container');
@@ -168,6 +188,8 @@
         });
     }
 
+=======
+>>>>>>> e9a76d8df7b6d049e4b2774ee404977b779cff3e
     // Display message when no student found
     function displayNoStudentMessage() {
         // Hide student data
@@ -185,12 +207,15 @@
         updateTotalPrice();
     }
 
+<<<<<<< HEAD
     // Clear book section
     function clearBookSection() {
         // Clear book container
         document.getElementById('book-container').innerHTML = '';
     }
 
+=======
+>>>>>>> e9a76d8df7b6d049e4b2774ee404977b779cff3e
     // Update selected products count
     function updateSelectedCount() {
         const selectedCheckboxes = document.querySelectorAll('.card-checkbox:checked');

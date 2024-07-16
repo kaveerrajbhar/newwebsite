@@ -6,20 +6,24 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Book; // Import your Book model
 
+
 class ProductController extends Controller
 {
     public function create()
     {
+
         return view('books.create');
     }
 
     public function update()
     {
         return view('books.edit');
+
     }
 
     public function store(Request $request)
     {
+
         // Validate the incoming request data
         $validated = $request->validate([
             'name' => 'required|string|max:255',
@@ -119,3 +123,4 @@ class ProductController extends Controller
         }
     }
 }
+

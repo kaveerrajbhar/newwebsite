@@ -17,7 +17,11 @@ use App\Http\Controllers\StudentBookController;
 |
 */
 
+<<<<<<< HEAD
 Route::middleware(['web'])->group(function () {
+=======
+
+>>>>>>> e9a76d8df7b6d049e4b2774ee404977b779cff3e
 Route::get('/students/search', [StudentController::class, 'search'])->name('students.search');
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
@@ -47,6 +51,7 @@ Route::put('/students/{id}', [StudentBookController::class, 'update'])->name('st
 // Delete a student
 Route::delete('/students/{id}', [StudentBookController::class, 'destroy'])->name('students.destroy');
 
+<<<<<<< HEAD
 
 // Route to show the form for creating a book
 Route::get('/books/create', [ProductController::class, 'create'])->name('books.create');
@@ -65,6 +70,15 @@ Route::patch('books/{id}', [ProductController::class, 'updateTwo'])->name('books
 
 });
 
+=======
+//books Route
+//  Route::any('/books/store', [ProductController::class, 'store'])->name('books.store');
+//  Route::get('/books', [ProductController::class, 'create'])->name('books.create');
+
+
+Route::any('/books/create', [ProductController::class, 'create'])->name('books.create');
+Route::any('/books', [ProductController::class, 'store'])->name('books.store');
+>>>>>>> e9a76d8df7b6d049e4b2774ee404977b779cff3e
 
 
 

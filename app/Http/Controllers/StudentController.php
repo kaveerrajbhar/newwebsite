@@ -85,6 +85,7 @@ public function search(Request $request)
     ->where('Std', $std)
     ->get();
 
+<<<<<<< HEAD
     // Check if any students were found
     if ($students->isNotEmpty()) {
         $products = [];
@@ -101,10 +102,178 @@ public function search(Request $request)
             ];
         }
 
+=======
+    // Define static products
+    $products = [];
+
+    // Check if any students were found
+    if ($students->isNotEmpty()) {
+        $products = [];
+    
+        // Fetch books for std-1
+        if ($students->first()->Std == 'std-1') {
+            $books = Book::where('Std', 'std 1')->get();
+            foreach ($books as $book) {
+                $products[] = [
+                    'id' => $book->id,
+                    'name' => $book->name,
+                    'price' => $book->price,
+                    'image' => 'data:image/jpeg;base64,' . base64_encode($book->image),
+                ];
+            }
+        }
+    
+        // Fetch books for std-2
+        if ($students->first()->Std == 'std-2') {
+            $books = Book::where('Std', 'std 2')->get();
+            foreach ($books as $book) {
+                $products[] = [
+                    'id' => $book->id,
+                    'name' => $book->name,
+                    'price' => $book->price,
+                    'image' => 'data:image/jpeg;base64,' . base64_encode($book->image),
+                ];
+            }
+        }
+    
+        // Add conditions for std-3 to std-12
+        // Fetch books for std-3
+        if ($students->first()->Std == 'std-3') {
+            $books = Book::where('Std', 'std 3')->get();
+            foreach ($books as $book) {
+                $products[] = [
+                    'id' => $book->id,
+                    'name' => $book->name,
+                    'price' => $book->price,
+                    'image' => 'data:image/jpeg;base64,' . base64_encode($book->image),
+                ];
+            }
+        }
+         // Add conditions for std-3 to std-12
+        // Fetch books for std-3
+        if ($students->first()->Std == 'std-4') {
+            $books = Book::where('Std', 'std 3')->get();
+            foreach ($books as $book) {
+                $products[] = [
+                    'id' => $book->id,
+                    'name' => $book->name,
+                    'price' => $book->price,
+                    'image' => 'data:image/jpeg;base64,' . base64_encode($book->image),
+                ];
+            }
+        }
+         // Add conditions for std-3 to std-12
+        // Fetch books for std-3
+        if ($students->first()->Std == 'std-5') {
+            $books = Book::where('Std', 'std 3')->get();
+            foreach ($books as $book) {
+                $products[] = [
+                    'id' => $book->id,
+                    'name' => $book->name,
+                    'price' => $book->price,
+                    'image' => 'data:image/jpeg;base64,' . base64_encode($book->image),
+                ];
+            }
+        }
+         // Add conditions for std-3 to std-12
+        // Fetch books for std-3
+        if ($students->first()->Std == 'std-6') {
+            $books = Book::where('Std', 'std 3')->get();
+            foreach ($books as $book) {
+                $products[] = [
+                    'id' => $book->id,
+                    'name' => $book->name,
+                    'price' => $book->price,
+                    'image' => 'data:image/jpeg;base64,' . base64_encode($book->image),
+                ];
+            }
+        }
+         // Add conditions for std-3 to std-12
+        // Fetch books for std-3
+        if ($students->first()->Std == 'std-7') {
+            $books = Book::where('Std', 'std 3')->get();
+            foreach ($books as $book) {
+                $products[] = [
+                    'id' => $book->id,
+                    'name' => $book->name,
+                    'price' => $book->price,
+                    'image' => 'data:image/jpeg;base64,' . base64_encode($book->image),
+                ];
+            }
+        }
+         // Add conditions for std-3 to std-12
+        // Fetch books for std-3
+        if ($students->first()->Std == 'std-8') {
+            $books = Book::where('Std', 'std 3')->get();
+            foreach ($books as $book) {
+                $products[] = [
+                    'id' => $book->id,
+                    'name' => $book->name,
+                    'price' => $book->price,
+                    'image' => 'data:image/jpeg;base64,' . base64_encode($book->image),
+                ];
+            }
+        }
+         // Add conditions for std-3 to std-12
+        // Fetch books for std-3
+        if ($students->first()->Std == 'std-9') {
+            $books = Book::where('Std', 'std 3')->get();
+            foreach ($books as $book) {
+                $products[] = [
+                    'id' => $book->id,
+                    'name' => $book->name,
+                    'price' => $book->price,
+                    'image' => 'data:image/jpeg;base64,' . base64_encode($book->image),
+                ];
+            }
+        }
+         // Add conditions for std-3 to std-12
+        // Fetch books for std-3
+        if ($students->first()->Std == 'std-10') {
+            $books = Book::where('Std', 'std 3')->get();
+            foreach ($books as $book) {
+                $products[] = [
+                    'id' => $book->id,
+                    'name' => $book->name,
+                    'price' => $book->price,
+                    'image' => 'data:image/jpeg;base64,' . base64_encode($book->image),
+                ];
+            }
+        }
+         // Add conditions for std-3 to std-12
+        // Fetch books for std-3
+        if ($students->first()->Std == 'std-12') {
+            $books = Book::where('Std', 'std 3')->get();
+            foreach ($books as $book) {
+                $products[] = [
+                    'id' => $book->id,
+                    'name' => $book->name,
+                    'price' => $book->price,
+                    'image' => 'data:image/jpeg;base64,' . base64_encode($book->image),
+                ];
+            }
+        }
+         // Add conditions for std-3 to std-12
+        // Fetch books for std-3
+        if ($students->first()->Std == 'std-12') {
+            $books = Book::where('Std', 'std 3')->get();
+            foreach ($books as $book) {
+                $products[] = [
+                    'id' => $book->id,
+                    'name' => $book->name,
+                    'price' => $book->price,
+                    'image' => 'data:image/jpeg;base64,' . base64_encode($book->image),
+                ];
+            }
+        }
+       
+    
+>>>>>>> e9a76d8df7b6d049e4b2774ee404977b779cff3e
         return response()->json([
             'student' => $students->first(), // Assuming only one student is returned
             'products' => $products
         ]);
+<<<<<<< HEAD
     } else {
         return response()->json([
             'message' => 'No students found for the given query and standard.'
@@ -112,6 +281,10 @@ public function search(Request $request)
     }
 }
 
+=======
+    }
+}
+>>>>>>> e9a76d8df7b6d049e4b2774ee404977b779cff3e
 }
 
 
